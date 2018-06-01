@@ -1,0 +1,36 @@
+  <h3 class="component">       airplane-component</h3>
+
+
+<h3 class> Planes</h3>
+
+ <ul class="airplane">
+  <!--<li *ngFor = "let plane of machines" 
+     (click) ="onSelect(plane)"
+     [class.selected] ="plane === selectedPlane">
+   <span class="badge"> id: {{plane.id}}</span>  model:{{plane.name}} 
+ </li> -->
+
+ <li *ngFor="let plane of machines">
+  <a routerLink="/detail/{{plane.id}}"> 
+    <span class="badge">{{plane.id}}</span> {{plane.name}}
+    </a>
+    <button class="delete" title="delete plane"
+(click)="delete(plane)">x</button>
+</li>
+
+</ul> 
+
+<div>
+    <label>Airplane Model:
+      <input #planeName />
+    </label>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <button (click)="add(planeName.value); planeName.value=''">
+      add
+    </button>
+
+    
+  </div>
+<!-- <app-plane-details [InputPlane]="selectedPlane"></app-plane-details>
+ -->
+  

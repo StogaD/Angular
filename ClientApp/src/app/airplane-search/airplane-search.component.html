@@ -1,0 +1,16 @@
+<p>
+  airplane-search works!
+</p>
+<div id="search-component">
+    <h4>airplane Search</h4>
+   
+    <input #searchBox id="search-box" (keyup)="search(searchBox.value)" />
+   
+    <ul class="search-result">
+      <li *ngFor="let plane of planes$ | async" >
+        <a routerLink="/detail/{{plane.id}}">
+          {{plane.name}}
+        </a>
+      </li>
+    </ul>
+  </div>

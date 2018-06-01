@@ -1,0 +1,15 @@
+<h3 class="component">      plane-Details-component </h3>
+
+<div *ngIf="InputPlane">
+  
+ <span>Selected Airplane </span><h3> Id: {{InputPlane.id}} : {{ InputPlane.name | uppercase }} Details</h3>
+<div *ngIf="InputPlane">
+    <label>Edit Item:
+      <input [(ngModel)]="InputPlane.name" placeholder="name">
+    </label>
+  </div>
+ 
+  <button (click)="save()">save</button>
+
+
+</div>

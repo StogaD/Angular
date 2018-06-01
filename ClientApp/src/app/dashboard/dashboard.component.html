@@ -1,0 +1,14 @@
+<p>
+  dashboard works!
+</p>
+<h3>Top Planes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let plane of planes" class="col-1-4" routerLink = "/detail/{{plane.id}}">
+    <div class="module hero">
+      <h4>{{plane.name}}</h4>
+    </div> 
+
+  </a>
+</div>
+
+<app-airplane-search></app-airplane-search>
