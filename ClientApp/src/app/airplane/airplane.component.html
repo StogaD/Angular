@@ -12,7 +12,8 @@
 
  <li *ngFor="let plane of machines">
   <a routerLink="/detail/{{plane.id}}"> 
-    <span class="badge">{{plane.id}}</span> {{plane.name}}
+   
+  <span class="badge">{{plane.id}}</span> <span> {{plane.SModel}} </span> <span>{{plane.Stype}} </span> 
     </a>
     <button class="delete" title="delete plane"
 (click)="delete(plane)">x</button>
